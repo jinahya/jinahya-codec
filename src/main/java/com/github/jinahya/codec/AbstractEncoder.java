@@ -21,6 +21,8 @@ import java.nio.BufferOverflowException;
 import java.nio.BufferUnderflowException;
 import java.nio.ByteBuffer;
 import static java.nio.ByteBuffer.allocate;
+import static java.nio.ByteBuffer.wrap;
+import java.nio.charset.Charset;
 import static java.util.Objects.requireNonNull;
 import java.util.function.IntConsumer;
 
@@ -45,14 +47,13 @@ public abstract class AbstractEncoder implements Encoder {
     @Override
     public int encode(final ByteBuffer decoded, final ByteBuffer encoded) {
 
-        int units = 0;
+        int count = 0;
 
-        for (int decodedPosition, encodedPosition;
-             decoded.remaining() >= specification.minDecodedUnitBytes()
-             && encoded.remaining() >= specification.minEncodedUnitBytes();) {
+        while (decoded.remaining() >= specification.minDecodedUnitBytes()
+               && encoded.remaining() >= specification.minEncodedUnitBytes()) {
 
-            decodedPosition = decoded.position();
-            encodedPosition = encoded.position();
+            final int decodedPosition = decoded.position();
+            final int encodedPosition = encoded.position();
             try {
                 encoder.encode(decoded, encoded);
             } catch (BufferUnderflowException | BufferOverflowException e) { // NOSONAR
@@ -61,10 +62,10 @@ public abstract class AbstractEncoder implements Encoder {
                 break;
             }
 
-            units++;
+            count++;
         }
 
-        return units;
+        return count;
     }
 
 
@@ -75,12 +76,29 @@ public abstract class AbstractEncoder implements Encoder {
         final int capacity = specification.maxEncodedBytes(decoded.remaining());
         final ByteBuffer encoded = allocate(capacity);
 
-        final int consumee = encode(decoded, encoded);
+        final int count = encode(decoded, encoded);
         if (consumer != null) {
-            consumer.accept(consumee);
+            consumer.accept(count);
         }
 
         encoded.flip();
+        return encoded;
+    }
+
+
+    @Override
+    public String encode(final String decoded, final Charset decodedCharset,
+                         final Charset encodedCharset) {
+
+        final byte[] decodedBytes = decoded.getBytes(decodedCharset);
+        final int encodedCapacity
+            = specification.maxEncodedBytes(decodedBytes.length);
+        final ByteBuffer encodedBuffer = ByteBuffer.allocate(encodedCapacity);
+
+        final int units = encode(wrap(decodedBytes), encodedBuffer);
+
+        final String encoded = new String(
+            encodedBuffer.array(), 0, encodedBuffer.position(), encodedCharset);
         return encoded;
     }
 
