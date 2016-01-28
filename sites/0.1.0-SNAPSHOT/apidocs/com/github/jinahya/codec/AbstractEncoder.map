@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./Specification.html" title="com.github.jinahya.codec.Specification" alt="" coords="355,17,449,42"/>
+<area shape="rect" id="node1" href="./Specification.html" title="&lt;TABLE&gt;" alt="" coords="344,5,460,53"/>
+<area shape="rect" id="node2_1" href="./AbstractEncoder.html" title="com.github.jinahya.codec.AbstractEncoder" alt="" coords="169,54,285,79"/>
+<area shape="rect" id="node2" href="./AbstractEncoder.html" title="&lt;TABLE&gt;" alt="" coords="159,43,296,91"/>
+<area shape="rect" id="node3_2" href="./UnitEncoder.html" title="com.github.jinahya.codec.UnitEncoder" alt="" coords="356,83,448,125"/>
+<area shape="rect" id="node3" href="./UnitEncoder.html" title="&lt;TABLE&gt;" alt="" coords="345,77,459,131"/>
+<area shape="rect" id="node4_3" href="./Encoder.html" title="com.github.jinahya.codec.Encoder" alt="" coords="16,45,100,88"/>
+<area shape="rect" id="node4" href="./Encoder.html" title="&lt;TABLE&gt;" alt="" coords="5,40,111,93"/>
+</map>

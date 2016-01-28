@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./Decoder.html" title="com.github.jinahya.codec.Decoder" alt="" coords="16,29,100,72"/>
+<area shape="rect" id="node1" href="./Decoder.html" title="&lt;TABLE&gt;" alt="" coords="5,24,111,77"/>
+<area shape="rect" id="node6_1" href="./AbstractDecoder.html" title="com.github.jinahya.codec.AbstractDecoder" alt="" coords="169,38,287,63"/>
+<area shape="rect" id="node6" href="./AbstractDecoder.html" title="&lt;TABLE&gt;" alt="" coords="159,27,297,75"/>
+<area shape="rect" id="node2_2" href="./Specification.html" title="com.github.jinahya.codec.Specification" alt="" coords="356,94,451,119"/>
+<area shape="rect" id="node2" href="./Specification.html" title="&lt;TABLE&gt;" alt="" coords="345,83,461,131"/>
+<area shape="rect" id="node3_3" href="./AbstractEncoder.html" title="com.github.jinahya.codec.AbstractEncoder" alt="" coords="170,151,286,177"/>
+<area shape="rect" id="node3" href="./AbstractEncoder.html" title="&lt;TABLE&gt;" alt="" coords="159,140,297,188"/>
+<area shape="rect" id="node5_4" href="./UnitEncoder.html" title="com.github.jinahya.codec.UnitEncoder" alt="" coords="357,160,449,203"/>
+<area shape="rect" id="node5" href="./UnitEncoder.html" title="&lt;TABLE&gt;" alt="" coords="347,155,460,208"/>
+<area shape="rect" id="node4_5" href="./UnitDecoder.html" title="com.github.jinahya.codec.UnitDecoder" alt="" coords="357,11,449,53"/>
+<area shape="rect" id="node4" href="./UnitDecoder.html" title="&lt;TABLE&gt;" alt="" coords="347,5,460,59"/>
+<area shape="rect" id="node7_6" href="./Encoder.html" title="com.github.jinahya.codec.Encoder" alt="" coords="16,143,100,185"/>
+<area shape="rect" id="node7" href="./Encoder.html" title="&lt;TABLE&gt;" alt="" coords="5,137,111,191"/>
+</map>
