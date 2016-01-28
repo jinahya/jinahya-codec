@@ -20,19 +20,19 @@ under the License.
 <rss version="0.91">
   <channel>
     <title>jinahya-codec - Checkstyle report</title>
-    <link>https://github.com/jinahya/0.1.0-SNAPSHOT</link>
+    <link>https://github.com/jinahya/jinahya-codec</link>
     <description>jinahya-codec - Checkstyle report</description>
     <language>en-us</language>
     <copyright>&#169;2016</copyright>
     <item>
       <title>File: 7,
-             Errors: 47,
+             Errors: 52,
              Warnings: 0,
              Infos: 0
       </title>
-            <link>https://github.com/jinahya/0.1.0-SNAPSHOT/checkstyle.html</link>
+            <link>https://github.com/jinahya/jinahya-codec/checkstyle.html</link>
       <description>
-        <p>Click <a href="https://github.com/jinahya/0.1.0-SNAPSHOT/checkstyle.html">here</a> for the full Checkstyle report.</p>
+        <p>Click <a href="https://github.com/jinahya/jinahya-codec/checkstyle.html">here</a> for the full Checkstyle report.</p>
 
         <table summary="Files" boder="1">
           <thead>
@@ -46,7 +46,7 @@ under the License.
           <tbody>
                           <tr>
                 <td>
-                  <a href="https://github.com/jinahya/0.1.0-SNAPSHOT/checkstyle.html#com.github.jinahya.codec.UnitDecoder.java">com/github/jinahya/codec/UnitDecoder.java</a>
+                  <a href="https://github.com/jinahya/jinahya-codec/checkstyle.html#com.github.jinahya.codec.UnitDecoder.java">com/github/jinahya/codec/UnitDecoder.java</a>
                 </td>
                 <td>
                   0
@@ -60,7 +60,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/jinahya/0.1.0-SNAPSHOT/checkstyle.html#com.github.jinahya.codec.Specification.java">com/github/jinahya/codec/Specification.java</a>
+                  <a href="https://github.com/jinahya/jinahya-codec/checkstyle.html#com.github.jinahya.codec.Specification.java">com/github/jinahya/codec/Specification.java</a>
                 </td>
                 <td>
                   0
@@ -74,7 +74,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/jinahya/0.1.0-SNAPSHOT/checkstyle.html#com.github.jinahya.codec.UnitEncoder.java">com/github/jinahya/codec/UnitEncoder.java</a>
+                  <a href="https://github.com/jinahya/jinahya-codec/checkstyle.html#com.github.jinahya.codec.UnitEncoder.java">com/github/jinahya/codec/UnitEncoder.java</a>
                 </td>
                 <td>
                   0
@@ -88,7 +88,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/jinahya/0.1.0-SNAPSHOT/checkstyle.html#com.github.jinahya.codec.AbstractEncoder.java">com/github/jinahya/codec/AbstractEncoder.java</a>
+                  <a href="https://github.com/jinahya/jinahya-codec/checkstyle.html#com.github.jinahya.codec.AbstractEncoder.java">com/github/jinahya/codec/AbstractEncoder.java</a>
                 </td>
                 <td>
                   0
@@ -97,12 +97,12 @@ under the License.
                   0
                 </td>
                 <td>
-                  8
+                  9
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/jinahya/0.1.0-SNAPSHOT/checkstyle.html#com.github.jinahya.codec.Decoder.java">com/github/jinahya/codec/Decoder.java</a>
+                  <a href="https://github.com/jinahya/jinahya-codec/checkstyle.html#com.github.jinahya.codec.Decoder.java">com/github/jinahya/codec/Decoder.java</a>
                 </td>
                 <td>
                   0
@@ -116,7 +116,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/jinahya/0.1.0-SNAPSHOT/checkstyle.html#com.github.jinahya.codec.AbstractDecoder.java">com/github/jinahya/codec/AbstractDecoder.java</a>
+                  <a href="https://github.com/jinahya/jinahya-codec/checkstyle.html#com.github.jinahya.codec.AbstractDecoder.java">com/github/jinahya/codec/AbstractDecoder.java</a>
                 </td>
                 <td>
                   0
@@ -125,12 +125,12 @@ under the License.
                   0
                 </td>
                 <td>
-                  8
+                  12
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/jinahya/0.1.0-SNAPSHOT/checkstyle.html#com.github.jinahya.codec.Encoder.java">com/github/jinahya/codec/Encoder.java</a>
+                  <a href="https://github.com/jinahya/jinahya-codec/checkstyle.html#com.github.jinahya.codec.Encoder.java">com/github/jinahya/codec/Encoder.java</a>
                 </td>
                 <td>
                   0
