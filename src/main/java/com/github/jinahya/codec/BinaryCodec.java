@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 Jin Kwon &lt;jinahya_at_gmail.com&gt;.
+ * Copyright 2017 Jin Kwon &lt;onacit at gmail.com&gt;.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,30 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.github.jinahya.codec;
-
-
-import java.nio.ByteBuffer;
-import java.nio.charset.Charset;
-import java.util.function.IntConsumer;
-
 
 /**
  *
- * @author Jin Kwon &lt;jinahya_at_gmail.com&gt;
+ * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
-public interface Encoder {
+public abstract class BinaryCodec {
 
+    public abstract BinaryEncoder newEncoder();
 
-    int encode(ByteBuffer decoded, ByteBuffer encoded);
-
-
-    ByteBuffer encode(ByteBuffer decoded, IntConsumer consumer);
-
-
-    String encode(String decoded, Charset decodedCharset,
-                  Charset encodedCharset);
-
+    public abstract BinaryDecoder newDecoder();
 }
-

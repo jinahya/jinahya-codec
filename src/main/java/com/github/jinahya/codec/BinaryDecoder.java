@@ -13,22 +13,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.github.jinahya.codec;
 
-
 import java.nio.ByteBuffer;
-
 
 /**
  *
  * @author Jin Kwon &lt;jinahya_at_gmail.com&gt;
  */
-@FunctionalInterface
-public interface UnitDecoder {
+public interface BinaryDecoder {
 
+    /**
+     * Decodes byte from specified input buffer to specified output buffer.
+     *
+     * @param encoded the input buffer from which encoded bytes are read.
+     * @param decoded the output buffer to which decoded bytes are written.
+     * @return the number of units decoded
+     */
+    int decode(ByteBuffer encoded, ByteBuffer decoded);
 
-    void decode(ByteBuffer encoded, ByteBuffer decoded);
-
+    default int decodeFinal(final ByteBuffer encoded,
+                            final ByteBuffer decoded) {
+        return 0;
+    }
 }
-
