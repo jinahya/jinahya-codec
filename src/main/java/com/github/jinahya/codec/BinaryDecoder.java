@@ -24,16 +24,16 @@ import java.nio.ByteBuffer;
 public interface BinaryDecoder {
 
     /**
-     * Decodes byte from specified input buffer to specified output buffer.
+     * Decodes bytes from specified input buffer to specified output buffer.
      *
      * @param encoded the input buffer from which encoded bytes are read.
      * @param decoded the output buffer to which decoded bytes are written.
      * @return the number of units decoded
      */
-    int decode(ByteBuffer encoded, ByteBuffer decoded);
+    int decodeUpdate(ByteBuffer encoded, ByteBuffer decoded);
 
     default int decodeFinal(final ByteBuffer encoded,
                             final ByteBuffer decoded) {
-        return 0;
+        return decodeUpdate(encoded, decoded);
     }
 }
