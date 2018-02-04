@@ -28,16 +28,17 @@ public interface BinaryEncoder {
      *
      * @param decoded the input buffer from which decoded data are read.
      * @param encoded the output buffer to which encoded data are written.
-     * @return the number of units encoded
+     * @return the number of units processed.
      */
     int encodeUpdate(ByteBuffer decoded, ByteBuffer encoded);
 
     /**
      * Encodes data in a single-part operation, or finishes a multiple-part
      * operation. The {@code encodeFinal} method of {@code BinaryEncoder}
-     * interface invokes
-     * {@link #encodeUpdate(java.nio.ByteBuffer, java.nio.ByteBuffer)} with
-     * given arguments and returns the result.
+     * interface repeatedly invokes
+     * {@link #encodeUpdate(java.nio.ByteBuffer, java.nio.ByteBuffer)} while the
+     * result is greater than zero and returns the total number of units
+     * encoded. Override this method if more finalization is required.
      *
      * @param decoded the input buffer from which decoded bytes are read.
      * @param encoded the output buffer from which encoded bytes are written.
@@ -45,6 +46,16 @@ public interface BinaryEncoder {
      */
     default int encodeFinal(final ByteBuffer decoded,
                             final ByteBuffer encoded) {
-        return encodeUpdate(decoded, encoded);
+        if (decoded == null) {
+            throw new NullPointerException("decoded is null");
+        }
+        if (encoded == null) {
+            throw new NullPointerException("encoded is null");
+        }
+        int total = 0;
+        for (int c; (c = encodeUpdate(decoded, encoded)) > 0; total += c) {
+            // empty
+        }
+        return total;
     }
 }

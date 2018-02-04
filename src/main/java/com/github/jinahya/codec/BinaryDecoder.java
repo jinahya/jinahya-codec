@@ -32,8 +32,29 @@ public interface BinaryDecoder {
      */
     int decodeUpdate(ByteBuffer encoded, ByteBuffer decoded);
 
+    /**
+     * Decodes data in a single-part operation, or finishes a multiple-part
+     * operation. The {@code decodeFinal} method of {@code BinaryDecoder}
+     * interface invokes
+     * {@link #decodeUpdate(jafva.nio.ByteBuffer, java.nio.ByteBuffer)} while
+     * the result is greater than zero and returns the total number of units
+     * processed. Override this method if more finalization is required.
+     *
+     * @param encoded the input buffer from which encoded bytes are read.
+     * @param decoded the output buffer to which decoded bytes are written.
+     * @return the number of units decoded.
+     */
     default int decodeFinal(final ByteBuffer encoded,
                             final ByteBuffer decoded) {
-        return decodeUpdate(encoded, decoded);
+        if (encoded == null) {
+            throw new NullPointerException("encoded is null");
+        }
+        if (decoded == null) {
+            throw new NullPointerException("decoded is null");
+        }
+        int total = 0;
+        for (int c; (c = decodeUpdate(encoded, decoded)) > 0; total += c) {
+        }
+        return total;
     }
 }
